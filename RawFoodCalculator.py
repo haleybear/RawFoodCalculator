@@ -9,8 +9,8 @@ pupDog = input("Is your pet a dog or is it a puppy?(Puppy is calculated between 
 type(pupDog)
 if pupDog in ("dog", "Dog"):
 
-    dogWeight = input("What is your dog's current weight? In pounds please! ")
-    idealWeight = input("What is the ideal weight for your dog? ")
+    dogWeight = int (input("What is your dog's current weight? In pounds please! "))
+    idealWeight = int  (input("What is the ideal weight for your dog? "))
     if (dogWeight > idealWeight):
 #This means that the pup need to lose weight
         if (dogWeight > 15):
@@ -24,14 +24,16 @@ if pupDog in ("dog", "Dog"):
 #    From 11-15 lbs: 3% of their body weight
 #    To gain or lose weight: +1% or -1% accordingly
             if(range(5)):
-                food = dogWeight * .04
+                food = (dogWeight) * .04
             elif(range(6,10)):
                 food = dogWeight * .03
             elif(range(11,15)):
                 food = dogWeight * .02
 				
-    elif(dogweight < idealWeight):
-	    if(dogWeight > 15):
+    elif(dogWeight < idealWeight):
+	    
+        if(dogWeight > 15):
+          
 #+2% of idealWeight for dogs over 15lbs
             food = idealWeight * .02
         else:	
@@ -42,15 +44,15 @@ if pupDog in ("dog", "Dog"):
 #    From 11-15 lbs: 3% of their body weight
 #    To gain or lose weight: +1% or -1% accordingly
             if(range(5)):
-                food = dogWeight * .06
+                food =  dogWeight * .06
             elif(range(6,10)):
-                food = dogWeight * .05
+                food =  dogWeight * .05
             elif(range(11,15)):
-                food = dogWeight * .04
-    elif(dogweight == idealWeight):
+                food =  dogWeight * .04
+    elif(dogWeight == idealWeight):
 #for over 15lb 2% to maintain
         if(dogWeight > 15):
-            food = dogWeight * .02
+            food =  dogWeight * .02
         else:
 #for less than 15lbs:
 #    Up to 5 lbs: 5% of their body weight
@@ -58,13 +60,13 @@ if pupDog in ("dog", "Dog"):
 #    From 11-15 lbs: 3% of their body weight
 #    To gain or lose weight: +1% or -1% accordingly
             if(range(5)):
-                food = dogWeight * .05
+                food =  dogWeight * .05
             elif(range(6,10)):
-                food = dogWeight * .04
+                food =  dogWeight * .04
             elif(range(11,15)):
-                food = dogWeight * .05
+                food =  dogWeight * .05
 			
-
+print("You would need to feed ", dogName, " ", food, "lbs over the course of the day")
 """elif pupDog in ("puppy", "Puppy"):
  
 	pupAge = input("What is your pup's current age in the closest full month? ")
